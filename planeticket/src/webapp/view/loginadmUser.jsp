@@ -22,9 +22,6 @@
 					<th field="admper"  width="80">权限</th>
 				</tr>			
 			</thead>
-	
-	
-	
 		</table>
 	</div>
 </body>
