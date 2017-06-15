@@ -15,7 +15,7 @@ public class AdmUserController {
 	@Resource
 	private AdmUserService admUserService;
 	
-	new 
+	 
 	@RequestMapping("/loginadmUser")
 	public AdmUser loginadmUser(AdmUser admUser){
 		AdmUser loginadm=admUserService.queryAdmUser(admUser);
