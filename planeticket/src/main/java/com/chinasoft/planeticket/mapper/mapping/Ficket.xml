@@ -21,5 +21,9 @@
   			insert into ticket (tplace,tdestination,tcabin,tDate,tseat,tchidren,baby,tprice,tname) 
   			values (#{tplace},#{tdestination},#{tcabin},#{tchidren},#{baby},#{tprice},#{tname})
   		</insert>
+  		<!-- 删除 -->	
+  			<delete id="deleteFicket">
+  				delete from ticket where tname=#{tname};
+  			</delete>
   			
   </mapper>

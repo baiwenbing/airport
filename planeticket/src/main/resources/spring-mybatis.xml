@@ -3,8 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<typeAliases>
-		<package name="bean"/>
-	</typeAliases>
-	
+	<typeAliases>  
+       <typeAlias type="com.chinasoft.planeticket.pojo.Ficket" alias="Ficket"></typeAlias>  
+    </typeAliases>  
+   <mappers>  
+       <mapper resource="com/chinasoft/planeticket/mapper/*.xml"></mapper>  
+   </mappers>  
 </configuration>

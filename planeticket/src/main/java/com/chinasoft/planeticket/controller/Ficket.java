@@ -18,6 +18,7 @@ public class Ficket {
 	@RequestMapping("/doLogin")
 	@ResponseBody
 	public Ficket doLogin(Ficket ficket){
+		System.out.println("------------------------------->alter");  
 		Ficket login=iFicketService.insertFicket(ficket);
 		System.out.println(login.toString());
 		return login;
