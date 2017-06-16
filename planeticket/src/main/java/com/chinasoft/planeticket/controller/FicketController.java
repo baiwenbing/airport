@@ -21,8 +21,19 @@ public class FicketController {
 	public Ficket doLogin(Ficket ficket){
 		Ficket query=iFicketService.queryFicket(ficket);
 		return query;
-		
 	}
+	
+	
+	/**
+	 * 添加跳转
+	 * @return
+	 */
+	@RequestMapping("/inser")
+	public String Insert(){
+		System.out.println("++++++");
+		return "FicketView";
+	}
+	
 	@RequestMapping("/insertFicket")
 	@ResponseBody
 	public Ficket insertFicket(Ficket ficket){
