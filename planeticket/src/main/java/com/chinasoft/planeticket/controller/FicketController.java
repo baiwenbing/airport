@@ -40,7 +40,8 @@ public class FicketController {
 	@RequestMapping("/insertFicket")
 	@ResponseBody
 	public Ficket insertFicket(Ficket ficket){
-		int insert=iFicketService.insertFicket(ficket);
+		Ficket insert=new Ficket();
+		
 		System.out.println(insert);
 		return ficket;
 	} 
