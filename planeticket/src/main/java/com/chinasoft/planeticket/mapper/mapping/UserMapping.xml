@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.chinasoft.planeticket.mapper.UserMapper">
+  		<resultMap id="userResults" type="user" >
+  			<id column="uid" property="uid"/>
+  			<result column="uname" property="uname"/>
+  			<result column="upwd" property="upwd"/>
+  			<result column="urealname" property="urealname"/>
+  			<result column="usex" property="usex"/>
+  			<result  column="uage" property="uage"/>
+  			<result column="ubirthday" property="ubirthday"/>
+  			<result column="uidnum" property="uidnum"/>
+  			<result column="uemail" property="uemail"/>
+  			<result column="uphone" property="uphone"/>
+  			<result column="money_mid" property="money_mid"/>
+  		</resultMap>
+  		
+  		<insert id="insertUser" parameterType="user" useGeneratedKeys="true" keyProperty="uid">
+  			insert into users(uname,upwd,urealname,usex,uage,ubirthday,uidnum,uemail,uphone,money_mid)values 
+  			(#{uname},#{upwd},#{urealname},#{usex},#{uage},#{ubirthday},#{uidnum},#{uemail},#{uphone},#{money_mid})
+  		</insert>
+  	</mapper>
