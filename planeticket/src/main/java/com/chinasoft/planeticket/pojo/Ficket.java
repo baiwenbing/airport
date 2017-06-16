@@ -40,7 +40,7 @@ public class Ficket {
 	 */
 	private String tprice;
 	/**
-	 * /乘客姓名
+	 * 乘客姓名
 	 */
 	private String tname;
 	public int getTid() {

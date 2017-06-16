@@ -1,5 +1,7 @@
 package com.chinasoft.planeticket.service;
 
+import java.util.List;
+
 import com.chinasoft.planeticket.pojo.Ficket;
 
 public interface IFicketService {
@@ -9,7 +11,8 @@ public interface IFicketService {
 	 * @param ficket
 	 * @return 
 	 */
-	Ficket queryFicket(Ficket ficket);
+	public List<Ficket> findAllFicket();
+	public List<Ficket> selectFicket(String ficket); 
 	
 	/**
 	 * 添加

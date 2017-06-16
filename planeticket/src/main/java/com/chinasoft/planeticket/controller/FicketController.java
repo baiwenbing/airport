@@ -1,5 +1,7 @@
 package com.chinasoft.planeticket.controller;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -16,10 +18,11 @@ public class FicketController {
 	private IFicketService iFicketService;
 	
 	
-	@RequestMapping("/queryFicket")
+	@RequestMapping("/findFicke")
 	@ResponseBody
-	public Ficket doLogin(Ficket ficket){
-		Ficket query=iFicketService.queryFicket(ficket);
+	public String findFicke(Ficket ficket){
+		List<Ficket> find=iFicketService.findAllFicket();
+		 ficketAll=find;
 		return query;
 	}
 	

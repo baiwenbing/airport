@@ -4,12 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-<!-- <link rel="stylesheet" href="/planeticket/jquery-easyui-1.5.2/themes/default/easyui.css">
-<link  rel="stylesheet" href="/planeticket/jquery-easyui-1.5.2/themes/icon.css">
-<script type="text/javascript" src="/planeticket/jquery-easyui-1.5.2/jquery.min.js"></script>
-<script type="text/javascript" src="/planeticket/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
- --></head>
+<title>购买机票</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/jquery-easyui-1.5.2/themes/default/easyui.css">
+<link  rel="stylesheet" href="${pageContext.request.contextPath}/jquery-easyui-1.5.2/themes/icon.css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/jquery-easyui-1.5.2/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/jquery-easyui-1.5.2/plugins/jquery.validatebox.js"></script>
+<script type="text/javascript">
+
+</script>
+</head>
 <body>
 	<form action="${pageContext.request.contextPath}/ficket/insertFicket.do">
 		出发地：<input name="tstartplace">

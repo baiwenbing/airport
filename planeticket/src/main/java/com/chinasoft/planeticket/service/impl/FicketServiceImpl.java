@@ -1,5 +1,7 @@
 package com.chinasoft.planeticket.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
@@ -16,10 +18,16 @@ public class FicketServiceImpl implements IFicketService{
  * 查询
  */
 	@Override
-	public Ficket queryFicket(Ficket ficket) {
+	public List<Ficket> findAllFicket() {
 		// TODO Auto-generated method stub
-		return ficketMapper.queryFicket(ficket);
+		return ficketMapper.findAllFicket();
 	}
+	@Override
+	public List<Ficket> selectFicket(String ficket) {
+		// TODO Auto-generated method stub
+		return ficketMapper.selectFicket(ficket);
+	}
+
 /**
  * 添加
  */

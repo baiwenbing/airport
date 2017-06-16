@@ -23,7 +23,11 @@
   		</insert>
   	
   			<!-- 查询 --> 
+  			 <select id="findAllFicket" resultType="ficket">  
+       			 select * from ticket order by tid  
+    		</select> 
+  			
   			<select id="queryFicket" parameterType="ficket" resultMap="ficketResults">
-  				select * from Ficket where tid=#{tid} and tname=#{tname}
+  				select * from ticket where tname like '%' ||#{tname}||'%' order by tid
   			</select>
   </mapper>

@@ -1,5 +1,7 @@
 package com.chinasoft.planeticket.mapper;
 
+import java.util.List;
+
 import com.chinasoft.planeticket.pojo.Ficket;
 
 public interface FicketMapper {
@@ -20,5 +22,6 @@ public interface FicketMapper {
 	 * @param ficket
 	 * @return
 	 */
-	Ficket queryFicket(Ficket ficket);
+	public List<Ficket> findAllFicket();
+	public List<Ficket> selectFicket(String ficket); 
 }	
