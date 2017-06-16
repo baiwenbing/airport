@@ -29,6 +29,6 @@ public class FicketController {
 		int insert=iFicketService.insertFicket(ficket);
 		System.out.println(insert);
 		return ficket;
-	}
+	} 
 	
 }
