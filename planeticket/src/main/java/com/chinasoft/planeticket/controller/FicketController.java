@@ -20,13 +20,13 @@ public class FicketController {
 	private IFicketService iFicketService;
 	
 	
-	@RequestMapping("/findFicke")
+/*	@RequestMapping("/findFicke")
 	@ResponseBody
 	public String findFicke(Ficket ficket){
 		List<Ficket> find=iFicketService.findAllFicket();
 		 ficketAll=find;
 		return query;
-	}
+	}*/
 	
 	
 	/**
