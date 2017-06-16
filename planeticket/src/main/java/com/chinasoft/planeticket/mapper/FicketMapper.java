@@ -1,6 +1,6 @@
 package com.chinasoft.planeticket.mapper;
 
-import com.chinasoft.planeticket.controller.Ficket;
+import com.chinasoft.planeticket.pojo.Ficket;
 
 public interface FicketMapper {
 	/**
@@ -8,11 +8,17 @@ public interface FicketMapper {
 	 * @param ficket
 	 * @return
 	 */
-	Ficket insertFicket(Ficket ficket); 
+	public int insertFicket(Ficket ficket); 
 	/**
 	 * 删除
 	 * @param ficket
 	 * @return
 	 */
 	Ficket deleteFicket(Ficket ficket);
+	/**
+	 * 查询
+	 * @param ficket
+	 * @return
+	 */
+	Ficket queryFicket(Ficket ficket);
 }	

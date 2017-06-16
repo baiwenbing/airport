@@ -10,11 +10,11 @@ public class Ficket {
 	/**
 	 * 出发地
 	 */
-	private String tplace; 
+	private String tstartplace; 
 	/**
 	 * 到达地
 	 */
-	private String tdestination;
+	private String tendplace;
 	/**
 	 * 仓位
 	 */
@@ -22,11 +22,11 @@ public class Ficket {
 	/**
 	 * 日期
 	 */
-	private Date tDate;
+	private Date tdate;
 	/**
 	 * 座位
 	 */
-	private String tseat;
+	private String tsit;
 	/**
 	 * 儿童
 	 */
@@ -49,17 +49,17 @@ public class Ficket {
 	public void setTid(int tid) {
 		this.tid = tid;
 	}
-	public String getTplace() {
-		return tplace;
+	public String getTstartplace() {
+		return tstartplace;
 	}
-	public void setTplace(String tplace) {
-		this.tplace = tplace;
+	public void setTstartplace(String tstartplace) {
+		this.tstartplace = tstartplace;
 	}
-	public String getTdestination() {
-		return tdestination;
+	public String getTendplace() {
+		return tendplace;
 	}
-	public void setTdestination(String tdestination) {
-		this.tdestination = tdestination;
+	public void setTendplace(String tendplace) {
+		this.tendplace = tendplace;
 	}
 	public String getTcabin() {
 		return tcabin;
@@ -67,17 +67,17 @@ public class Ficket {
 	public void setTcabin(String tcabin) {
 		this.tcabin = tcabin;
 	}
-	public Date gettDate() {
-		return tDate;
+	public Date getTdate() {
+		return tdate;
 	}
-	public void settDate(Date tDate) {
-		this.tDate = tDate;
+	public void setTdate(Date tdate) {
+		this.tdate = tdate;
 	}
-	public String getTseat() {
-		return tseat;
+	public String getTsit() {
+		return tsit;
 	}
-	public void setTseat(String tseat) {
-		this.tseat = tseat;
+	public void setTsit(String tsit) {
+		this.tsit = tsit;
 	}
 	public String getTchidren() {
 		return tchidren;
@@ -105,8 +105,14 @@ public class Ficket {
 	}
 	@Override
 	public String toString() {
-		return "Ficket [tid=" + tid + ", tplace=" + tplace + ", tdestination=" + tdestination + ", tcabin=" + tcabin
-				+ ", tDate=" + tDate + ", tseat=" + tseat + ", tchidren=" + tchidren + ", baby=" + baby + ", tprice="
+		return "Ficket [tid=" + tid + ", tstartplace=" + tstartplace + ", tendplace=" + tendplace + ", tcabin=" + tcabin
+				+ ", tdate=" + tdate + ", tsit=" + tsit + ", tchidren=" + tchidren + ", baby=" + baby + ", tprice="
 				+ tprice + ", tname=" + tname + "]";
 	}
+
+	
+	
 }
+
+
+

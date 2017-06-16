@@ -1,18 +1,20 @@
 package com.chinasoft.planeticket.service;
 
-import com.chinasoft.planeticket.controller.Ficket;
+import com.chinasoft.planeticket.controller.FicketController;
+import com.chinasoft.planeticket.pojo.Ficket;
 
 public interface IFicketService {
+		
 	/**
 	 * 添加
 	 * @param ficket
 	 * @return
 	 */
-	Ficket insertFicket(Ficket ficket); 
+	public int insertFicket(Ficket ficket); 
 	/**
-	 * 删除
+	 * 查询
 	 * @param ficket
-	 * @return
+	 * @return 
 	 */
-	Ficket deleteFicket(Ficket ficket);
+	Ficket queryFicket(Ficket ficket);
 }

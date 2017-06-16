@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.chinasoft.planeticket.mapper.FicketMapper">
-  		<resultMap type="Ficket" id="ficketResults">
+  		<resultMap id="ficketResults" type="ficket" >
   			<id column="tid" property="tid"/>
   			<result column="tplace" property="tplace"/>
   			<result column="tdestination" property="tdestination"/>
@@ -17,13 +17,13 @@
   			<result column="tname" property="tname"/>
   		</resultMap>
   		<!-- 添加 -->
-  		<insert id="insertFicket">
-  			insert into ticket (tplace,tdestination,tcabin,tDate,tseat,tchidren,baby,tprice,tname) 
-  			values (#{tplace},#{tdestination},#{tcabin},#{tchidren},#{baby},#{tprice},#{tname})
+  		<insert id="insertFicket" parameterType="ficket" useGeneratedKeys="true" keyProperty="uid">
+  			insert into ticket (tstartplace,tendplace,tcabin,tdate,tsit,tchidren,baby,tprice,tname) 
+  			values (#{tstartplace},#{tendplace},#{tcabin},#{tdate},#{tsit},#{tchidren},#{baby},#{tprice},#{tname})
   		</insert>
-  		<!-- 删除 -->	
-  			<delete id="deleteFicket">
-  				delete from ticket where tname=#{tname};
-  			</delete>
-  			
+  	
+  			<!-- 查询 --> 
+  			<select id="queryFicket" parameterType="ficket" resultMap="ficketResults">
+  				select * from Ficket where tid=#{tid} and tname=#{tname}
+  			</select>
   </mapper>
