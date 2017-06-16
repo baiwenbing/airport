@@ -7,18 +7,18 @@
   		<resultMap id="ficketResults" type="ficket" >
   			<id column="tid" property="tid"/>
   			<result column="tplace" property="tplace"/>
-  			<result column="tdestination" property="tdestination"/>
+  			<result column="tstartplace" property="tstartplace"/>
   			<result column="tcabin" property="tcabin"/>
-  			<result column="tDate" property="tDate"/>
-  			<result  column="tseat" property="tseat"/>
+  			<result column="tdate" property="tdate"/>
+  			<result  column="tsit" property="tsit"/>
   			<result column="tchidren" property="tchidren"/>
   			<result column="baby" property="baby"/>
   			<result column="tprice" property="tprice"/>
   			<result column="tname" property="tname"/>
   		</resultMap>
   		<!-- 添加 -->
-  		<insert id="insertFicket" parameterType="ficket" useGeneratedKeys="true" keyProperty="uid">
-  			insert into ticket (tstartplace,tendplace,tcabin,tdate,tsit,tchidren,baby,tprice,tname) 
+  		<insert id="insertFicket" parameterType="ficket" useGeneratedKeys="true" keyProperty="uid" >
+  			insert into ticket (tstartplace,tendplace,tcabin,tdate,tsit,tchildren,tbaby,tprice,tname) 
   			values (#{tstartplace},#{tendplace},#{tcabin},#{tdate},#{tsit},#{tchidren},#{baby},#{tprice},#{tname})
   		</insert>
   	

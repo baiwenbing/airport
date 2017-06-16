@@ -24,9 +24,11 @@ public class FicketController {
 		
 	}
 	@RequestMapping("/insertFicket")
-	public int insertFicket(Ficket ficket){
+	@ResponseBody
+	public Ficket insertFicket(Ficket ficket){
 		int insert=iFicketService.insertFicket(ficket);
-		return insert;
+		System.out.println(insert);
+		return ficket;
 	}
 	
 }

@@ -12,13 +12,17 @@ import com.chinasoft.planeticket.service.IFicketService;
 public class FicketServiceImpl implements IFicketService{
 	
 	@Resource FicketMapper ficketMapper;
-
+/**
+ * 查询
+ */
 	@Override
 	public Ficket queryFicket(Ficket ficket) {
 		// TODO Auto-generated method stub
 		return ficketMapper.queryFicket(ficket);
 	}
-
+/**
+ * 添加
+ */
 	@Override
 	public int insertFicket(Ficket ficket) {
 		// TODO Auto-generated method stub
