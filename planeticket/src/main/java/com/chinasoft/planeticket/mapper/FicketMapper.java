@@ -10,7 +10,7 @@ public interface FicketMapper {
 	 * @param ficket
 	 * @return
 	 */
-	public int insertFicket(Ficket ficket); 
+	public boolean insertFicket(Ficket ficket); 
 	/**
 	 * 删除
 	 * @param ficket

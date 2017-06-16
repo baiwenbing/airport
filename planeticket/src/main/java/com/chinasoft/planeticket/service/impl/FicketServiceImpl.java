@@ -32,9 +32,10 @@ public class FicketServiceImpl implements IFicketService{
  * 添加
  */
 	@Override
-	public int insertFicket(Ficket ficket) {
+	public boolean insertFicket(Ficket ficket) {
 		// TODO Auto-generated method stub
 		return ficketMapper.insertFicket(ficket);
+		
 	}
 
 

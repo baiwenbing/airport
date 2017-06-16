@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.chinasoft.planeticket.pojo.Ficket;
 import com.chinasoft.planeticket.service.IFicketService;
 
+import net.sf.json.JSONObject;
+
 @Controller
 @RequestMapping("/ficket")
 public class FicketController {
@@ -39,11 +41,18 @@ public class FicketController {
 	
 	@RequestMapping("/insertFicket")
 	@ResponseBody
-	public Ficket insertFicket(Ficket ficket){
-		Ficket insert=new Ficket();
-		
-		System.out.println(insert);
-		return ficket;
+	public JSONObject insertFicket(Ficket ficket){
+		JSONObject insert=new JSONObject();
+		 System.out.println("++++++++");
+		 System.out.println("添加"+insert.toString());
+		if (iFicketService.insertFicket(ficket)) {
+			insert.put("status", 1);
+			insert.put("tid", "添加成功");
+		}else {
+			insert.put("status", 0);
+			insert.put("tid", "添加失败");
+		}
+		return insert;
 	} 
 	
 }

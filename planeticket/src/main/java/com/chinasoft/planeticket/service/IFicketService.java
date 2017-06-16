@@ -19,6 +19,6 @@ public interface IFicketService {
 	 * @param ficket
 	 * @return
 	 */
-	public int insertFicket(Ficket ficket); 
+	public boolean insertFicket(Ficket ficket); 
 	
 }
